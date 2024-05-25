@@ -1,6 +1,4 @@
-Here is the modified project description for the EEP523 final project:
 
----
 
 This is the EEP523 final project, a Fitness application that allows displaying workout information as well as starting and stopping a workout. By implementing [App Actions](https://developer.android.com/guide/app-actions/overview), we enable users to call upon our application to fulfill supported [built-in intents (BIIs)](https://developer.android.com/reference/app-actions/built-in-intents) in the fitness category.
 
