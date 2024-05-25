@@ -1,23 +1,17 @@
-# *:warning: Warning: Go to [App Actions fitness sample](https://github.com/android/app-actions-samples/tree/main/fitness-biis) or [App Actions Widget sample](https://github.com/android/app-actions-samples/tree/main/widget) for maintained sample.
+Here is the modified project description for the EEP523 final project:
 
-*:warning: Warning: This [App Actions fitness sample](https://github.com/android/app-actions-samples/tree/main/fitness-biis) and [App Actions Widget sample](https://github.com/android/app-actions-samples/tree/main/widget) has migrated to [App-Action directory](https://github.com/android/app-actions-samples) in Android Github. This version will no longer be maintained.*
+---
 
-This is a sample Fitness application that allows displaying workout information as well as starting
-and stopping a workout. By implementing [App Actions](ttps://developer.android.com/guide/app-actions/overview),
-we allow the user to call upon our application to fulfill supported
-[built-in intents (BIIs)](https://developer.android.com/reference/app-actions/built-in-intents) in the
-fitness category.
+This is the EEP523 final project, a Fitness application that allows displaying workout information as well as starting and stopping a workout. By implementing [App Actions](https://developer.android.com/guide/app-actions/overview), we enable users to call upon our application to fulfill supported [built-in intents (BIIs)](https://developer.android.com/reference/app-actions/built-in-intents) in the fitness category.
 
-Specifically, this sample supports the following BIIs:
-* `actions.intent.START_EXERCISE`: Open the sample app and start an exercise session.
-* `actions.intent.STOP_EXERCISE`: Open the sample app and stops the current exercise session.
-* `actions.intent.GET_EXERCISE_OBSERVATION`: Display a
-  [widget](https://developers.google.com/assistant/app/widgets) inside the Assistant with information on a
-  particular exercise statistic.
+Specifically, this project supports the following BIIs:
+* `actions.intent.START_EXERCISE`: Opens the app and starts an exercise session.
+* `actions.intent.STOP_EXERCISE`: Opens the app and stops the current exercise session.
+* `actions.intent.GET_EXERCISE_OBSERVATION`: Displays a [widget](https://developers.google.com/assistant/app/widgets) inside the Assistant with information on a particular exercise statistic.
 
 ![alt-text](media/fit-actions-demo.gif "App Actions Demo")
 
-## How to use this sample
+## How to use this project
 
 Clone or download the project to your preferred location. Then, import and modify the project with the following steps:
 
@@ -38,8 +32,7 @@ Clone or download the project to your preferred location. Then, import and modif
     ```xml
     <capability android:name="actions.intent.START_EXERCISE">
         <intent
-            android:targetPackage="PUT_YOUR_APPLICATION_ID_HERE"
-            >
+            android:targetPackage="PUT_YOUR_APPLICATION_ID_HERE">
         </intent>
     </capability>
     ```
@@ -47,30 +40,27 @@ Clone or download the project to your preferred location. Then, import and modif
     ```xml
     <capability android:name="actions.intent.STOP_EXERCISE">
         <intent
-            android:targetPackage="PUT_YOUR_APPLICATION_ID_HERE"
-            >
+            android:targetPackage="PUT_YOUR_APPLICATION_ID_HERE">
         </intent>
     </capability>
     ```
-   
+
     ```xml
     <capability android:name="actions.intent.GET_EXERCISE_OBSERVATION">
         <intent
-            android:targetPackage="PUT_YOUR_APPLICATION_ID_HERE"
-            >
+            android:targetPackage="PUT_YOUR_APPLICATION_ID_HERE">
         </intent>
     </capability>
     ```
 
-4. In Android Studio, find the root directory of the sample.
+4. In Android Studio, find the root directory of the project.
 5. Select the `build.gradle` file.
 6. Follow the instructions presented by the IDE.
-7. Install [Google Assistant plugin for Android Studio](https://developers.google.com/assistant/app/test-tool)
-
+7. Install [Google Assistant plugin for Android Studio](https://developers.google.com/assistant/app/test-tool).
 
 Then, you can try the App Actions by following these steps:
 
-1. Build and run the sample on your physical test device (**Run "app"**).
+1. Build and run the project on your physical test device (**Run "app"**).
 2. Open the App Actions test tool (**Tools > Google Assistant > App Actions Test Tool**).
 3. Define an invocation name to use for invoking the App Actions (like "my test app"). This name is only for testing purposes, so it can be different from what you want to deploy to production later.
 4. Click **Create Preview**. Once your preview is created, the test tool window updates to display information about BIIs found in your `shortcuts.xml` file.
@@ -79,18 +69,6 @@ After you create a preview, you can then try using voice or written commands dir
 
 If you run into any issues, check out the [troubleshooting guide](https://developers.google.com/assistant/app/troubleshoot) in our developer documentation.
 
-## Contribution guidelines
-
-If you want to contribute to this project, be sure to review the
-[contribution guidelines](CONTRIBUTING.md).
-
-We use [GitHub issues](https://github.com/actions-on-google/appactions-fitness-kotlin/issues) for
-tracking requests and bugs, please get support by posting your technical questions to
-[Stack Overflow](https://stackoverflow.com/questions/tagged/app-actions).
-
-Report [general issues with App Actions features](https://issuetracker.google.com/issues/new?component=617864&template=1257475)
-or [make suggestions for additional built-in intents](https://issuetracker.google.com/issues/new?component=617864&template=1261453)
-through our public issue tracker.
 
 ## References
 
