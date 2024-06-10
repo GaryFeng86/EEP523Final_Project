@@ -101,7 +101,7 @@ class FitTrackingFragment : Fragment() {
         }
 
         // Observe the ongoing activity and update the view accordingly.
-        fitRepository.getOnGoingActivity().observe(this, Observer {
+        fitRepository.getOnGoingActivity().observe(viewLifecycleOwner, Observer {
             if (it == null) {
                 // When no ongoing activity only start the countdown if we haven't already.
                 if (countDownMs > 0) {
