@@ -1,6 +1,8 @@
 ### Final Report：https://docs.google.com/document/d/1LQUoRTgaxzItHDhOkvSWNu8GMxXyyPEYnZtxNuZM8M4/edit?usp=sharing
 ### Test Vedio(running count): https://drive.google.com/file/d/1AoNmHiE4iIVtYL6YooUAbnCUf8uJiwW8/view?usp=sharing
-This is the EEP523 final project, a Fitness application that allows displaying workout information as well as starting and stopping a workout. By implementing [App Actions](https://developer.android.com/guide/app-actions/overview), we enable users to call upon our application to fulfill supported [built-in intents (BIIs)](https://developer.android.com/reference/app-actions/built-in-intents) in the fitness category.
+This is the EEP523 final project, a Fitness application that allows displaying workout information as well as starting and stopping a workout. 
+## APIs Use:
+By implementing [App Actions](https://developer.android.com/guide/app-actions/overview), we enable users to call upon our application to fulfill supported [built-in intents (BIIs)](https://developer.android.com/reference/app-actions/built-in-intents) in the fitness category.
 
 Specifically, this project supports the following BIIs:
 * `actions.intent.START_EXERCISE`: Opens the app and starts an exercise session.
@@ -8,6 +10,8 @@ Specifically, this project supports the following BIIs:
 * `actions.intent.GET_EXERCISE_OBSERVATION`: Displays a [widget](https://developers.google.com/assistant/app/widgets) inside the Assistant with information on a particular exercise statistic.
 
 ![alt-text](media/fit-actions-demo.gif "App Actions Demo")
+## Sensor Use: 
+Step Count sensor
 
 ## How to use this project
 
