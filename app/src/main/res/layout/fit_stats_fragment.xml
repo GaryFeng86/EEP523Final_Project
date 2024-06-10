@@ -16,95 +16,49 @@
   ~
   -->
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/startActivityRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.FitStatsFragment">
+    android:background="@color/colorPrimary"
+    tools:context=".tracking.FitTrackingFragment">
 
     <TextView
-        android:id="@+id/statsTitle"
-        style="@style/TextAppearance.MaterialComponents.Headline3"
-        android:layout_width="411dp"
-        android:layout_height="200dp"
-        android:elevation="5dp"
-        android:gravity="center"
-        android:paddingBottom="10dp"
-        android:text="@string/stats_title"
-        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/startActivityCountDown"
+        style="@style/TextAppearance.MaterialComponents.Headline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/statsActivityCount"
-        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:id="@+id/startActivityTitle"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        android:elevation="5dp"
-        android:gravity="center"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="@id/statsTitle"
-        app:layout_constraintEnd_toStartOf="@+id/statsDurationCount"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="30\nActivities" />
-
-    <TextView
-        android:id="@+id/statsDurationCount"
-        style="@style/TextAppearance.MaterialComponents.Caption"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="5dp"
-        android:gravity="center"
-        android:padding="8dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/statsActivityCount"
-        app:layout_constraintEnd_toStartOf="@+id/statsDistanceCount"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/statsActivityCount"
-        tools:text="250\nMinutes" />
-
-    <TextView
-        android:id="@+id/statsDistanceCount"
-        style="@style/TextAppearance.MaterialComponents.Caption"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:elevation="5dp"
-        android:gravity="center"
-        android:padding="8dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/statsDurationCount"
+        android:layout_marginBottom="40dp"
+        android:text="@string/start_activity_title"
+        app:layout_constraintBottom_toTopOf="@id/startActivityCountDown"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/statsDurationCount"
-        tools:text="350\nKm" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/statsList"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@android:color/white"
-        android:clipToPadding="false"
-        android:orientation="vertical"
-        android:paddingBottom="56dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    <ImageButton
+        android:id="@+id/startActivityButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="?attr/selectableItemBackground"
+        android:scaleType="fitXY"
+        android:src="@drawable/as_start_stop_toggle"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/statsTitle"
-        tools:listitem="@layout/fit_stats_row" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/statsStartButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_run"
-        android:tint="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/startActivityCountDown"
+        app:tint="@color/colorPrimaryDark" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
